@@ -13,6 +13,6 @@ class MovieController extends Controller
 
         $movies = Movie::all();
 
-        return view('layouts.home', compact('movies'));
+        return view('includes.index', compact('movies'));
     }
 }
