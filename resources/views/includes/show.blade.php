@@ -3,7 +3,6 @@
 @section('content')
 
 <div class="row flex-wrap m-4">
-    @foreach($movies as $movie)
     <div class="card m-3" style="width: 18rem;">
         <div class="card-body my-4">
             <h5 class="card-title">{{ $movie->title }}</h5>
@@ -11,10 +10,9 @@
             <p class="card-text"><span>Nazione di produzione: </span>{{ $movie->nationality }}</p>
             <p class="card-text"><span>Data di pubblicazione: </span>{{ $movie->date }}</p>
             <p class="card-text"><span>Media Voto: </span>{{ $movie->vote }}</p>
-            <a href="{{ route('movies.show', ['id'=> $movie->id]) }}" class="card-link">Dettagli</a>
+            <a href="{{ route('movies.index') }}" class="card-link">Indietro</a>
         </div>
     </div>
-    @endforeach
 </div>
 
 @endsection
