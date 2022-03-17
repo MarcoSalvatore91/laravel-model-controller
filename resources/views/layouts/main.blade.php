@@ -10,6 +10,11 @@
 </head>
 
 <body>
+
+    <header>
+        @include("includes.header")
+    </header>
+
     @yield('content');
 </body>
 
