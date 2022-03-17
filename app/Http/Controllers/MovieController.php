@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Movie;
+
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
     public function index()
     {
-        return view('layouts.home');
+
+        $movies = Movie::all();
+
+        return view('layouts.home', compact('movies'));
     }
 }
